@@ -1,7 +1,7 @@
 import { Topbar } from "./Topbar"
 
 
-export function Dashboard()
+export default function Dashboard()
 {
     return <>
             Dashboard Page

@@ -1,7 +1,7 @@
 
 import { Topbar } from "./Topbar"
 
-export function Landing()
+export default function Landing()
 {
     return <>
             Landing page

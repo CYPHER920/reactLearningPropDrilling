@@ -1,8 +1,8 @@
-
+import { lazy } from 'react'
 import { BrowserRouter, Routes,Route, useNavigate } from 'react-router-dom'
 import './App.css'
-import { Dashboard } from './components/Dashboard'
-import { Landing } from './components/Landing'
+const Dashboard = lazy(()=> import ('./components/Dashboard'))
+const Landing = lazy(()=> import ('./components/Landing'))
 import { Topbar } from './components/Topbar'
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
          <BrowserRouter>
             <Appbar />
           <Routes>
-            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path="/dashboard" element={<Dashboard/>}/> 
             <Route path="/landing" element={<Landing/>}/>
           </Routes>
          </BrowserRouter>
